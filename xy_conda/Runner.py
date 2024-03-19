@@ -50,7 +50,7 @@ class Runner(ArgParse):
                 "backup + [name]" 备份，环境名称可选,
                 "install + [url]" 安装 miniconda,
                 "install_pack" 安装pack包,
-                "load + [target_path] + [filepath]" 加载环境包, target_path:目标路径, filepath:环境包文件路径,
+                "load + [name] + [target_path] + [filepath]" 加载环境包, name:conda环境名称, target_path:目标路径, filepath:环境包文件路径
             """,
         )
         self.add_argument(
