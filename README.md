@@ -12,7 +12,7 @@
 
 ## 安装
 
-```
+```bash
 pip install xy_conda
 ```
 
@@ -20,13 +20,12 @@ pip install xy_conda
 
 ###### 1. 命令行
 
-```
-
-工作方式:
-"backup + [name]" 备份，环境名称可选,
-"install + [url]" 安装 miniconda,
-"install_pack" 安装pack包,
-"load + [name] + [target_path] + [filepath]" 加载环境包, name:conda环境名称, target_path:目标路径, filepath:环境包文件路径,
+```bash
+# 工作方式:
+# "backup + [name]" 备份，环境名称可选,
+# "install + [url]" 安装 miniconda,
+# "install_pack" 安装pack包,
+# "load + [name] + [target_path] + [filepath]" 加载环境包, name:conda环境名称, target_path:目标路径, filepath:环境包文件路径,
 
 > xy_conda -w backup
 > 是否备份当前环境 python_3_11_3 
