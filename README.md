@@ -34,7 +34,7 @@ pip install xy_conda
 > Y
 
 > xy_conda -w backup -n conda_name
-> 是否备份当前环境 python_3_11_3 
+> 是否备份当前环境 conda_name
 > 输入 [Y/n]
 > Y
 

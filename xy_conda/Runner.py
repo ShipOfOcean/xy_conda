@@ -50,7 +50,7 @@ class Runner(ArgParse):
                 "backup + [name]" 备份，环境名称可选,
                 "install + [url]" 安装 miniconda,
                 "install_pack" 安装pack包,
-                "load + [name] + [target_path] + [filepath]" 加载环境包, name:conda环境名称, target_path:目标路径, filepath:环境包文件路径
+                "load + [name] + [target_path] + [filepath]" 加载环境包, name:conda环境名称, target_path:目标路径, filepath:环境包文件
             """,
         )
         self.add_argument(
@@ -241,14 +241,25 @@ class Runner(ArgParse):
                 parents=True,
                 exist_ok=True,
             )
-        if not target_path.exists():
+        if target_path.exists():
             ok = os.system(f"tar xvf {filepath} -C {target_path}") == 0
             if ok is True:
                 print_s(f"加载环境完成... => {target_path}")
             else:
                 print_e("加载环境失败...")
         else:
-            print_e(f"创建目录失败 => {target_path} 已存在")
+            if not os.access(target_path.parent, os.W_OK):
+                print_e(f"目录 {target_path.parent} 没有写入权限!!!")
+                return
+            target_path.mkdir(
+                parents=True,
+                exist_ok=True,
+            )
+            ok = os.system(f"tar xvf {filepath} -C {target_path}") == 0
+            if ok is True:
+                print_s(f"加载环境完成... => {target_path}")
+            else:
+                print_e("加载环境失败...")
 
     def install(self):
         ok = self.conda.install()
