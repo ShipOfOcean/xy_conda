@@ -7,6 +7,7 @@
 ## Description
 Simple Conda tool that provides installation, loading, backup and other functions of conda on different platforms.
 
+<a href="https://github.com/ShipOfOcean/xy_conda.git" target="_blank">Github</a>
 
 ## 安装
 

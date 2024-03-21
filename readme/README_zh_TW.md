@@ -9,6 +9,7 @@
 ## 說明
 簡單Conda工具，提供不同平臺conda的安裝，載入，備份等功能。
 
+<a href="https://github.com/ShipOfOcean/xy_conda.git" target="_blank">Github位址</a>
 
 ## 安裝
 
