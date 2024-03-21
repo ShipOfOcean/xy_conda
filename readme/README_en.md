@@ -5,7 +5,7 @@
 - en [English](README_en.md)
 
 ## Description
-Easy File tools, especially for regular.
+Simple Conda tool that provides installation, loading, backup and other functions of conda on different platforms.
 
 
 ## 安装
